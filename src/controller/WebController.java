@@ -47,7 +47,7 @@ public class WebController {
 		
 		Page<Post> p = (Page<Post>)posts;
 		int currentPage = p.getPageNum();	//current page
-		int totalNum = (int) p.getTotal();	//total page
+		int totalNum = p.getPages();	//total page
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("index");
 		mv.addObject("currentPage", currentPage);
